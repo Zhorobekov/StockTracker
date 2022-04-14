@@ -74,7 +74,7 @@ final class StockListViewController: UIViewController {
         
         let addAction = UIAlertAction(title: "ADD", style: .default) { [unowned self] _ in
             activityIndicator.startAnimating()
-            guard let ticker = (alert.textFields?.first?.text?.uppercased()) else {return}
+            guard let ticker = (alert.textFields?.first?.text?.uppercased()) else { return }
             
             if checkRepeatingTicker(ticker) {
                 return
