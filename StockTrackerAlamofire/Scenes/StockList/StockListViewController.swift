@@ -78,27 +78,34 @@ final class StockListViewController: UIViewController {
             activityIndicator.startAnimating()
             guard let ticker = (alert.textFields?.first?.text?.uppercased()) else {return}
             
-            if viewModel.tickers.contains(ticker) {
-                showAlert(with: "Ticker Repeat", and: "this ticker is already contained in your list")
-                activityIndicator.stopAnimating()
-                return
-            }
-            
-            viewModel.addStock(ticker: ticker) { error in
-                if error == nil {
-                    showAlert(with: "Invalid ticker", and: "Please try again")
-                    activityIndicator.stopAnimating()
-                } else {
-                    let indexPath = IndexPath(row: viewModel.stocks.count - 1, section: 0)
-                    self.stockTableView.insertRows(at: [indexPath], with: .top)
-                    self.activityIndicator.stopAnimating()
-                }
-            }
-            
+            checkRepeatingTicker(ticker)
+            addStockToTableView(ticker: ticker)
         }
+        
         alert.addAction(closeAction)
         alert.addAction(addAction)
         present(alert, animated: true)
+    }
+    
+    private func addStockToTableView(ticker: String) {
+        viewModel.addStock(ticker: ticker) { [unowned self] error in
+            if error == nil {
+                showAlert(with: "Invalid ticker", and: "Please try again")
+                activityIndicator.stopAnimating()
+            } else {
+                let indexPath = IndexPath(row: viewModel.stocks.count - 1, section: 0)
+                stockTableView.insertRows(at: [indexPath], with: .top)
+                activityIndicator.stopAnimating()
+            }
+        }
+    }
+    
+    private func checkRepeatingTicker(_ ticker: String) {
+        if viewModel.tickers.contains(ticker) {
+            showAlert(with: "Ticker Repeat", and: "This ticker is already contained in your list")
+            activityIndicator.stopAnimating()
+            return
+        }
     }
     
     //MARK: Set RefreshControl
