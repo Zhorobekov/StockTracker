@@ -7,23 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17738E1A525AC19C6C719BBA /* Pods_StockTrackerAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCAA6C58C0CE4EFD03DBEA6 /* Pods_StockTrackerAlamofire.framework */; };
 		56084C5627EED0110061F621 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56084C5527EED0110061F621 /* AppDelegate.swift */; };
 		56084C5827EED0110061F621 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56084C5727EED0110061F621 /* SceneDelegate.swift */; };
-		56084C5A27EED0110061F621 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56084C5927EED0110061F621 /* ViewController.swift */; };
+		56084C5A27EED0110061F621 /* StockListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56084C5927EED0110061F621 /* StockListViewController.swift */; };
 		56084C5D27EED0110061F621 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56084C5B27EED0110061F621 /* Main.storyboard */; };
 		56084C5F27EED0110061F621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56084C5E27EED0110061F621 /* Assets.xcassets */; };
 		56084C6227EED0110061F621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56084C6027EED0110061F621 /* LaunchScreen.storyboard */; };
+		56084C6E27EED3710061F621 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56084C6D27EED3710061F621 /* StockModel.swift */; };
+		56084C7127EED3A50061F621 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56084C7027EED3A50061F621 /* NetworkManager.swift */; };
+		56084C7427EED3BD0061F621 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56084C7327EED3BD0061F621 /* DataManager.swift */; };
+		56084C7627EEF4D20061F621 /* StockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56084C7527EEF4D20061F621 /* StockCell.swift */; };
+		56084C7C27EF07780061F621 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56084C7B27EF07780061F621 /* GradientView.swift */; };
+		56AA847028082E3F00C89BD2 /* StockListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA846F28082E3F00C89BD2 /* StockListViewModel.swift */; };
+		56AA847328084B3500C89BD2 /* StockCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA847228084B3500C89BD2 /* StockCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41ABE58E7A70DBB4F6BDFFB9 /* Pods-StockTrackerAlamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockTrackerAlamofire.release.xcconfig"; path = "Target Support Files/Pods-StockTrackerAlamofire/Pods-StockTrackerAlamofire.release.xcconfig"; sourceTree = "<group>"; };
 		56084C5227EED0110061F621 /* StockTrackerAlamofire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockTrackerAlamofire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56084C5527EED0110061F621 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56084C5727EED0110061F621 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		56084C5927EED0110061F621 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		56084C5927EED0110061F621 /* StockListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListViewController.swift; sourceTree = "<group>"; };
 		56084C5C27EED0110061F621 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56084C5E27EED0110061F621 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56084C6127EED0110061F621 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56084C6327EED0110061F621 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56084C6D27EED3710061F621 /* StockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
+		56084C7027EED3A50061F621 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		56084C7327EED3BD0061F621 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		56084C7527EEF4D20061F621 /* StockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCell.swift; sourceTree = "<group>"; };
+		56084C7B27EF07780061F621 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		56AA846F28082E3F00C89BD2 /* StockListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListViewModel.swift; sourceTree = "<group>"; };
+		56AA847228084B3500C89BD2 /* StockCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCellViewModel.swift; sourceTree = "<group>"; };
+		DBCAA6C58C0CE4EFD03DBEA6 /* Pods_StockTrackerAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockTrackerAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA45C6902DBFB2C344F82099 /* Pods-StockTrackerAlamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockTrackerAlamofire.debug.xcconfig"; path = "Target Support Files/Pods-StockTrackerAlamofire/Pods-StockTrackerAlamofire.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17738E1A525AC19C6C719BBA /* Pods_StockTrackerAlamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +61,8 @@
 			children = (
 				56084C5427EED0110061F621 /* StockTrackerAlamofire */,
 				56084C5327EED0110061F621 /* Products */,
+				A9EEFF5110A2F324251A3079 /* Pods */,
+				5F70AB70CEEACE94CF5B0A4E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +77,103 @@
 		56084C5427EED0110061F621 /* StockTrackerAlamofire */ = {
 			isa = PBXGroup;
 			children = (
-				56084C5527EED0110061F621 /* AppDelegate.swift */,
-				56084C5727EED0110061F621 /* SceneDelegate.swift */,
-				56084C5927EED0110061F621 /* ViewController.swift */,
-				56084C5B27EED0110061F621 /* Main.storyboard */,
-				56084C5E27EED0110061F621 /* Assets.xcassets */,
-				56084C6027EED0110061F621 /* LaunchScreen.storyboard */,
-				56084C6327EED0110061F621 /* Info.plist */,
+				56084C6927EED29B0061F621 /* Scenes */,
+				56084C7227EED3AD0061F621 /* Helpers */,
+				56084C6F27EED37B0061F621 /* Models */,
+				56084C6A27EED2A70061F621 /* Storyboards */,
+				56084C6B27EED3250061F621 /* App */,
+				56084C6C27EED3360061F621 /* Resources */,
 			);
 			path = StockTrackerAlamofire;
+			sourceTree = "<group>";
+		};
+		56084C6927EED29B0061F621 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				56AA846C28082D9900C89BD2 /* StockList */,
+				56AA847128084AFB00C89BD2 /* StockCell */,
+				56084C7B27EF07780061F621 /* GradientView.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		56084C6A27EED2A70061F621 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				56084C5B27EED0110061F621 /* Main.storyboard */,
+				56084C6027EED0110061F621 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		56084C6B27EED3250061F621 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				56084C5527EED0110061F621 /* AppDelegate.swift */,
+				56084C5727EED0110061F621 /* SceneDelegate.swift */,
+				56084C6327EED0110061F621 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		56084C6C27EED3360061F621 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				56084C5E27EED0110061F621 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		56084C6F27EED37B0061F621 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				56084C6D27EED3710061F621 /* StockModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		56084C7227EED3AD0061F621 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				56084C7027EED3A50061F621 /* NetworkManager.swift */,
+				56084C7327EED3BD0061F621 /* DataManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		56AA846C28082D9900C89BD2 /* StockList */ = {
+			isa = PBXGroup;
+			children = (
+				56084C5927EED0110061F621 /* StockListViewController.swift */,
+				56AA846F28082E3F00C89BD2 /* StockListViewModel.swift */,
+			);
+			path = StockList;
+			sourceTree = "<group>";
+		};
+		56AA847128084AFB00C89BD2 /* StockCell */ = {
+			isa = PBXGroup;
+			children = (
+				56084C7527EEF4D20061F621 /* StockCell.swift */,
+				56AA847228084B3500C89BD2 /* StockCellViewModel.swift */,
+			);
+			path = StockCell;
+			sourceTree = "<group>";
+		};
+		5F70AB70CEEACE94CF5B0A4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBCAA6C58C0CE4EFD03DBEA6 /* Pods_StockTrackerAlamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9EEFF5110A2F324251A3079 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA45C6902DBFB2C344F82099 /* Pods-StockTrackerAlamofire.debug.xcconfig */,
+				41ABE58E7A70DBB4F6BDFFB9 /* Pods-StockTrackerAlamofire.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56084C6627EED0110061F621 /* Build configuration list for PBXNativeTarget "StockTrackerAlamofire" */;
 			buildPhases = (
+				49CD08CFEA34E1190D05465E /* [CP] Check Pods Manifest.lock */,
 				56084C4E27EED0110061F621 /* Sources */,
 				56084C4F27EED0110061F621 /* Frameworks */,
 				56084C5027EED0110061F621 /* Resources */,
+				73E0FBC29F2619AD3E288D89 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +244,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		49CD08CFEA34E1190D05465E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StockTrackerAlamofire-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73E0FBC29F2619AD3E288D89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockTrackerAlamofire/Pods-StockTrackerAlamofire-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockTrackerAlamofire/Pods-StockTrackerAlamofire-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StockTrackerAlamofire/Pods-StockTrackerAlamofire-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		56084C4E27EED0110061F621 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56084C5A27EED0110061F621 /* ViewController.swift in Sources */,
+				56084C7627EEF4D20061F621 /* StockCell.swift in Sources */,
+				56084C7C27EF07780061F621 /* GradientView.swift in Sources */,
+				56084C6E27EED3710061F621 /* StockModel.swift in Sources */,
+				56AA847328084B3500C89BD2 /* StockCellViewModel.swift in Sources */,
+				56084C7427EED3BD0061F621 /* DataManager.swift in Sources */,
+				56084C5A27EED0110061F621 /* StockListViewController.swift in Sources */,
+				56084C7127EED3A50061F621 /* NetworkManager.swift in Sources */,
 				56084C5627EED0110061F621 /* AppDelegate.swift in Sources */,
 				56084C5827EED0110061F621 /* SceneDelegate.swift in Sources */,
+				56AA847028082E3F00C89BD2 /* StockListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +444,7 @@
 		};
 		56084C6727EED0110061F621 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA45C6902DBFB2C344F82099 /* Pods-StockTrackerAlamofire.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -291,7 +452,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 429329GWZV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StockTrackerAlamofire/Info.plist;
+				INFOPLIST_FILE = StockTrackerAlamofire/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -312,6 +473,7 @@
 		};
 		56084C6827EED0110061F621 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41ABE58E7A70DBB4F6BDFFB9 /* Pods-StockTrackerAlamofire.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -319,7 +481,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 429329GWZV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StockTrackerAlamofire/Info.plist;
+				INFOPLIST_FILE = StockTrackerAlamofire/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
