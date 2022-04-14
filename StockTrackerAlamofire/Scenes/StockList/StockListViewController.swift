@@ -33,7 +33,7 @@ final class StockListViewController: UIViewController {
     }
     
     @IBAction func addButtonPressed(_ sender: Any) {
-        showAlert(with: "ADD STOCK", and: "Write stock's ticker")
+        showAddAlert(with: "ADD STOCK", and: "Write stock's ticker")
     }
     
     @IBAction func editButtonPressed(_ sender: Any) {
@@ -67,7 +67,16 @@ final class StockListViewController: UIViewController {
         return activityIndicator
     }
     
-    private func showAlert(with title: String, and message: String) {
+    private func showErrorAlert() {
+        let alert = UIAlertController(title: "Reapiting ticker", message: "This ticker is already contained in your list", preferredStyle: .alert)
+        let closeAction = UIAlertAction(title: "Close", style: .cancel)
+        
+        alert.addAction(closeAction)
+        activityIndicator.stopAnimating()
+        present(alert, animated: true)
+    }
+    
+    private func showAddAlert(with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let closeAction = UIAlertAction(title: "Close", style: .cancel)
         alert.addTextField()
@@ -90,7 +99,7 @@ final class StockListViewController: UIViewController {
     private func addStockToTableView(ticker: String) {
         viewModel.addStock(ticker: ticker) { [unowned self] error in
             if error == nil {
-                showAlert(with: "Invalid ticker", and: "Please try again")
+                showAddAlert(with: "Invalid ticker", and: "Please try again")
                 activityIndicator.stopAnimating()
             } else {
                 let indexPath = IndexPath(row: viewModel.stocks.count - 1, section: 0)
@@ -102,8 +111,7 @@ final class StockListViewController: UIViewController {
     
     private func checkRepeatingTicker(_ ticker: String) -> Bool {
         if viewModel.tickers.contains(ticker) {
-            showAlert(with: "Ticker Repeat", and: "This ticker is already contained in your list")
-            activityIndicator.stopAnimating()
+            showErrorAlert()
             return true
         }
         return false
