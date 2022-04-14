@@ -76,7 +76,9 @@ final class StockListViewController: UIViewController {
             activityIndicator.startAnimating()
             guard let ticker = (alert.textFields?.first?.text?.uppercased()) else {return}
             
-            checkRepeatingTicker(ticker)
+            if checkRepeatingTicker(ticker) {
+                return
+            }
             addStockToTableView(ticker: ticker)
         }
         
@@ -98,12 +100,13 @@ final class StockListViewController: UIViewController {
         }
     }
     
-    private func checkRepeatingTicker(_ ticker: String) {
+    private func checkRepeatingTicker(_ ticker: String) -> Bool {
         if viewModel.tickers.contains(ticker) {
             showAlert(with: "Ticker Repeat", and: "This ticker is already contained in your list")
             activityIndicator.stopAnimating()
-            return
+            return true
         }
+        return false
     }
     
     //MARK: Set RefreshControl
