@@ -68,8 +68,8 @@ final class StockListViewController: UIViewController {
     }
     
     private func showErrorAlert() {
-        let alert = UIAlertController(title: "Reapiting ticker", message: "This ticker is already contained in your list", preferredStyle: .alert)
-        let closeAction = UIAlertAction(title: "Close", style: .cancel)
+        let alert = UIAlertController(title: "Repeating ticker", message: "This ticker is already contained in your list", preferredStyle: .alert)
+        let closeAction = UIAlertAction(title: "OK", style: .cancel)
         
         alert.addAction(closeAction)
         activityIndicator.stopAnimating()
