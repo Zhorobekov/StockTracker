@@ -45,5 +45,4 @@ class StockCellViewModel: StockCellViewModelProtocol {
         self.stock = stock
     }
     
-    
 }
