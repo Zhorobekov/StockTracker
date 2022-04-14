@@ -21,8 +21,6 @@ final class StockListViewController: UIViewController {
     private var activityIndicator = UIActivityIndicatorView()
     private var refreshControl = UIRefreshControl()
     
-    private var isTableViewEdit = true
-    
     @IBOutlet weak private var stockTableView: UITableView!
     @IBOutlet weak private var editButton: UIBarButtonItem!
     
@@ -126,16 +124,8 @@ final class StockListViewController: UIViewController {
     //MARK: Editing stocks
     
     private func editStocks() {
-        switch isTableViewEdit {
-        case true:
-            stockTableView.isEditing = true
-            editButton.image = UIImage(systemName: "pencil.circle.fill")
-            isTableViewEdit = false
-        case false:
-            stockTableView.isEditing = false
-            editButton.image = UIImage(systemName: "pencil.circle")
-            isTableViewEdit = true
-        }
+        stockTableView.isEditing = stockTableView.isEditing ? false : true
+        editButton.image = stockTableView.isEditing ? UIImage(systemName: "pencil.circle.fill") : UIImage(systemName: "pencil.circle")
     }
 }
 
