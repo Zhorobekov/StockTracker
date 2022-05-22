@@ -18,17 +18,15 @@ protocol StockListViewModelProtocol {
 }
 
 class StockListViewModel: StockListViewModelProtocol {
-    
+   
     var stocks: [Stock] = []
 
     var tickers = DataManager.shared.fetchTickers()
     
     func updateStocks(completion: @escaping () -> Void) {
         for ticker in tickers {
-            NetworkManager.shared.fetchStock(with: ticker) { result in
-                switch result {
-                    
-                case .success(let stock):
+            NetworkManager.shared.fetchStock(with: ticker) { stock in
+               
                     if let index = self.stocks.firstIndex(where: { $0.symbol == stock.symbol}) {
                         self.stocks[index] = stock
                         completion()
@@ -36,30 +34,18 @@ class StockListViewModel: StockListViewModelProtocol {
                         self.stocks.append(stock)
                         completion()
                     }
-                    
-                case .failure(let error):
-                    print(error.localizedDescription)
                 }
             }
         }
-    }
     
     func addStock(ticker: String, completion: @escaping (Stock?) -> Void) {
-        NetworkManager.shared.fetchStock(with: ticker) { result in
-            switch result {
-            
-            case .success(let stock):
+        NetworkManager.shared.fetchStock(with: ticker) { stock in
                 self.stocks.append(stock)
                 self.tickers.append(ticker)
                 DataManager.shared.save(tickers: self.tickers)
                 completion(stock)
-            
-            case .failure(let error):
-                completion(nil)
-                print(error.localizedDescription)
             }
         }
-    }
     
     func deleteStock(at index: Int) {
         guard let tickerIndex = tickers.firstIndex(of: stocks.remove(at: index).symbol) else { print("1"); return }

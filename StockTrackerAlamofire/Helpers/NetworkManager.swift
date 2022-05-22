@@ -20,7 +20,7 @@ final class NetworkManager {
     
     private init() {}
     
-    func fetchStock(with ticker: String, completion: @escaping(Result<Stock, NetworkError>) -> Void) {
+    func fetchStock(with ticker: String, completion: @escaping(Stock) -> Void) {
         
         let url = "https://financialmodelingprep.com/api/v3/quote/\(ticker)?apikey=a15af8fcd7e5332f5022f0ccca771b00"
         AF.request(url)
@@ -35,16 +35,11 @@ final class NetworkManager {
                             name: stocks[0].name,
                             changesPercentage: stocks[0].changesPercentage
                         )
-                        DispatchQueue.main.async {
-                            completion(.success(stock))
-                        }
-                    } else {
-                        completion(.failure(.noData))
+                        completion(stock)
                     }
-                    
-                case .failure:
-                    completion(.failure(.decodingError))
+                    case .failure(let error):
+                        print(error)
+                    }
+                }
             }
-        }
     }
-}

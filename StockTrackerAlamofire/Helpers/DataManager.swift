@@ -24,6 +24,6 @@ final class DataManager {
     }
     
     func save(tickers: [String]) {
-        userDefaults.set(tickers, forKey: key)
+        userDefaults.set(tickers, forKey: "key")
     }
 }
